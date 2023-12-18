@@ -58,11 +58,12 @@ Dev Container facilitates **development environment as code**, ensuring a consis
 1. Install required software: code editor, Docker Desktop, JDK 17, Node.js 18, MongoDB 7.
 2. Manually start services.
 
-   Database:
+Database:
 
    ```bash
    cd .devcontainer
-   docker compose up -d db
+   docker compose up -d mongodb
+```
 
 Backend:
 
