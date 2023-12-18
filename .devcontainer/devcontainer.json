@@ -1,0 +1,58 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+  "name": "Custom",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "workspace",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "shutdownAction": "stopCompose",
+  "waitFor": "postStartCommand",
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "dockerDashComposeVersion": "v2"
+    }
+  },
+
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // This can be used to network with other containers or with the host.
+  "forwardPorts": [3000, 8080],
+
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      "settings": {
+       
+        "java.jdt.ls.java.home": "/usr/lib/jvm/java-17" // For both the Java language server and the default project JDK
+      },
+      "extensions": [
+        // Java
+        "vscjava.vscode-java-pack", // Extension Pack for Java
+      
+
+        // JavaScript
+        "dsznajder.es7-react-js-snippets", // ES7+ React/Redux/React-Native snippets
+
+        // MongoDB
+        "mongodb.mongodb-vscode", // MongoDB for VS Code
+
+        // Docker
+        "ms-azuretools.vscode-docker", // Docker
+
+        // Code Formatter
+        "esbenp.prettier-vscode", // Prettier
+        "editorconfig.editorconfig", // EditorConfig for VS Code
+
+        // Intellisense
+        "christian-kohler.path-intellisense", // Path Intellisense
+
+        // Code Spell Checker
+        "streetsidesoftware.code-spell-checker"
+
+      ]
+    }
+  }
+}

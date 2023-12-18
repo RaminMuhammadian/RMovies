@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "name": "Backend",
+      "request": "launch",
+      "type": "java",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "dev.raminm.movies.BackendApplication",
+      "projectName": "backend",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "Frontend",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/frontend/src",
+      "preLaunchTask": "npm: start - frontend"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Backend+Frontend",
+      "configurations": ["Backend", "Frontend"]
+      
+    }
+  ]
+}

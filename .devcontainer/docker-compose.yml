@@ -1,0 +1,25 @@
+
+services:
+  workspace:
+    build: .
+    volumes:
+      - ../..:/workspaces:delegated
+      
+    depends_on:
+      - mongodb
+
+
+  mongodb:
+    image: mongo:latest
+    volumes:
+      - mongodb-data-db:/data/db
+      - mongodb-data-configdb:/data/configdb
+    env_file:
+      - .env
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+
+volumes:
+  mongodb-data-db:
+  mongodb-data-configdb:
