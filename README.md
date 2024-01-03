@@ -6,7 +6,7 @@ Security is prioritized with JWT-based authentication, allowing users to securel
 
 Notably, RMovies offers a user-friendly watchlist feature. Once logged in, users can easily add their favorite movies, enhancing the personalized experience within the app. With a focus on security, efficiency, and user engagement, RMovies is a comprehensive solution for movie enthusiasts.
 
-![Screenshot](images/screenshot.png)
+![Screenshot](images/screenshot.PNG)
 
 ## Top Features
 - User Authentication: Secure user authentication system to allow users to register and login with created accounts.
