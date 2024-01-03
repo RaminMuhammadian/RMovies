@@ -12,7 +12,6 @@ services:
   mongodb:
     image: mongo:latest
     volumes:
-      - mongodb-data-db:/data/db
       - mongodb-data-configdb:/data/configdb
     env_file:
       - .env
@@ -21,5 +20,4 @@ services:
     restart: unless-stopped
 
 volumes:
-  mongodb-data-db:
   mongodb-data-configdb:
