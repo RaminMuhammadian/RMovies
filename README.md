@@ -1,4 +1,4 @@
-# RMovies
+# RMovies (Please, note that this project is a work in progess)
 
 RMovies is an all-inclusive movie review app with a robust full-stack architecture. The Java backend, powered by the Spring Boot framework, seamlessly communicates with the React-based frontend. MongoDB handles efficient data management, ensuring flexibility and scalability.
 
